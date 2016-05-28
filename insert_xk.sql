@@ -1,0 +1,10 @@
+insert into XS_KC values('020101', '101', 85);
+insert into XS_KC values('020101', '102', 87);
+insert into XS_KC values('020101', '107', 88);
+insert into XS_KC values('020102', '101', 58);
+insert into XS_KC values('020102', '102', 63);
+insert into XS_KC values('020104', '107', 76);
+insert into XS_KC values('020202', '103', 55);
+insert into XS_KC values('020202', '108', 80);
+insert into XS_KC values('020203', '103', 57);
+insert into XS_KC values('020204', '103', 71);

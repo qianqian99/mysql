@@ -1,1 +1,1 @@
-# mysql
+# mysql## first step study sql
