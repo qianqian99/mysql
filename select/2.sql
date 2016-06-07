@@ -4,3 +4,61 @@
 group by sno
 having count(*)  >= 2
 order by num desc;*/
+-- 4.1.1
+-- select * 
+-- from XSQK
+-- where sno =  any (
+--     select sno 
+--     from XS_KC 
+--     where cno='107' and sscore<'60');
+-- 4.1.2
+-- select *
+-- from XSQK
+-- where sno in(
+--     select sno 
+--     from XS_KC
+--     where cno='107' and sscore<'60');
+-- 4.2
+-- select * 
+-- from XSQK, XS_KC
+-- where XSQK.sno=XS_KC.sno and cno='101' and sscore<'60';
+-- 5
+-- select X.sno, X.sname, X.tel, Y.sno, Y.sname, Y.tel
+-- from XSQK as X, XSQK as Y
+-- where X.tel=Y.tel;
+-- 6
+-- select distinct dept
+-- from XSQK;
+-- 7.1
+-- select *
+-- from XSQK
+-- where sno =  any(
+--     select distinct sno
+--     from XS_KC);
+-- 7.2
+-- select distinct XSQK.sno, XSQK.sname  
+-- from XSQK, XS_KC
+-- where XSQK.sno=XS_KC.sno;
+-- 8.1
+-- select * 
+-- from XSQK
+-- where sno not in(
+--     select distinct sno 
+--     from XS_KC);
+-- 9
+-- select Y.sname
+-- from XSQK as X, XSQK as Y
+-- where X.dept=Y.dept and X.sname='yangying';
+-- 10
+-- select sname, cname, sscore
+-- from XSQK, XS_KC, KC
+-- where XSQK.sno=XS_KC.sno and XS_KC.cno=KC.cno;
+-- 11
+-- select cno, count(*) as num, max(sscore) as highScore
+-- from XS_KC
+-- group by cno;
+-- 12
+-- select sno, count(*) as num, sum(sscore)
+-- from XS_KC
+-- group by sno
+-- order by num;
