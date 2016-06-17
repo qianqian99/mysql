@@ -1,0 +1,42 @@
+-- create view StuAgeView
+-- as 
+-- select sno, sname, sex, (2016-YEAR(birth)) as age
+-- from XSQK;
+-- create view StuView
+-- as
+-- select sname, sex, dept
+-- from XSQK
+-- where sex='female';
+-- 3.
+-- select *
+-- from StuView;
+-- 4.
+-- create view CputDeptStu
+-- as
+-- select *
+-- from XSQK
+-- where prof='jisuanji';
+-- 5.
+-- create view CourseUnpass
+-- as 
+-- select XSQK.*
+-- from XSQK, XS_KC
+-- where XSQK.sno=XS_KC.sno and sscore < 60;
+-- 6.
+-- create view ScoreNum
+-- as 
+-- select cno, COUNT(*) as num, MAX(sscore) as highScore
+-- from XS_KC
+-- group by cno;
+-- 7.
+-- create view Something
+-- as
+-- select Y.*
+-- from XSQK as X, XSQK as Y
+-- where X.tel=Y.tel and X.sname='yuqijun';
+-- 8.
+-- create view ComplexView
+-- as 
+-- select XSQK.sname, KC.cname, XS_KC.sscore
+-- from XSQK, XS_KC, KC
+-- where XSQK.sno=XS_KC.sno and XS_KC.cno=KC.cno;
